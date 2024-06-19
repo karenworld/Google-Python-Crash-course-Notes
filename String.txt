@@ -1,0 +1,53 @@
+name = "Jaylen"
+print(name[1])
+
+output:
+a
+
+text = "Random string with a lot of characters"
+print(text[-1])
+print(text[-2])
+
+output:
+s
+r
+
+
+color = "Orange"
+color[1:4]
+
+ouput: //note: up to n which is index 3
+
+ran
+
+fruit = "Pineapple"
+print(fruit[:4]) //note: count till 4 places starting index 0,1,2,3
+print(fruit[4:]) //note : count from back till 5 places starting index 0,1,2,3,4
+
+ouput:
+
+Pine
+apple
+
+fruit = "Mangosteen"
+>>> fruit[1:4]
+'ang'
+
+
+>>> fruit[:5]
+'Mango'
+
+
+fruit[5:]
+'steen'
+
+>>> fruit[:5] + fruit[5:]
+'Mangosteen'
+
+"Security"[2:5]
+
+output: cur
+
+
+"system".index("t")
+output : 3

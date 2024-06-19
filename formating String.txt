@@ -1,0 +1,36 @@
+name = "Manny" 
+number = len(name) * 3 //len do not count from 0 but 1
+print("Hello {}, your lucky number is {}".format(name, number))
+
+output:
+
+Hello Manny, your lucky number is 15
+
+
+def to_celsius(x):
+  return (x-32)*5/9
+
+for x in range(0,101,10):
+  print("{:>3} F | {:>6.2f} C".format(x, to_celsius(x)))
+
+
+output:
+
+  0 F | -17.78 C
+ 10 F | -12.22 C
+ 20 F |  -6.67 C
+ 30 F |  -1.11 C
+ 40 F |   4.44 C
+ 50 F |  10.00 C
+ 60 F |  15.56 C
+ 70 F |  21.11 C
+ 80 F |  26.67 C
+ 90 F |  32.22 C
+100 F |  37.78 C
+
+the formatting expression {:.2f} means that you’d format this as a float number, with two digits after the decimal dot. 
+The colon acts as a separator from the field name, if you had specified one. 
+You can also specify text alignment using the greater than operator: >. 
+For example, the expression {:>3.2f} would align the text three spaces to the right, as well as specify a float number with two decimal places. 
+
+String formatting can be very handy for outputting easy-to-read textual output.

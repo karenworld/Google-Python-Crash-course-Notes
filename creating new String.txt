@@ -1,0 +1,85 @@
+message = "A kong string with a silly typo"
+message[2] = "l"
+#This will throw an error
+
+
+message = "A kong string with a silly typo"
+new_message = message[0:2] + "l" + message[3:]
+print(new_message)
+
+output:
+A long string with a silly typo
+
+
+
+message = "This is a new message"
+print(message)
+message = "And another one"
+print(message)
+
+output:
+
+This is a new message
+And another one
+
+
+pets="Cats & Dogs"
+pets.index("&")
+pets.index("C")
+pets.index("Dog")
+pets.index("s")
+
+output:
+
+3
+
+pets="Cats & Dogs"
+pets.index("x")
+#This will throw an error
+
+pets="Cats & Dogs"
+"Dragons" in pets
+"Cats" in pets
+
+output:
+True
+
+
+def replace_domain(email, old_domain, new_domain):
+  if "@" + old_domain in email:
+    index = email.index("@" + old_domain)
+    new_email = email[:index] + "@" + new_domain
+    return new_email
+  return email
+
+
+output:
+
+No Output
+
+
+animals = "lions tigers and bears"
+animals.index("g")
+
+output:
+
+8
+
+animals.index("bears")
+
+output:
+
+17
+
+animals = "lions tigers and bears"
+"horses" in animals
+
+output:
+False
+
+animals = "lions tigers and bears"
+"tigers" in animals
+
+output:
+True
+
