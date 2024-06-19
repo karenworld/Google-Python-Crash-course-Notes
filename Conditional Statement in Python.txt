@@ -1,0 +1,187 @@
+grade = 70
+ 
+if grade >= 65:
+    print("Passing grade")
+
+
+Output
+Passing grade
+
+
+grade = 60
+ 
+if grade >= 65:
+    print("Passing grade")
+
+When we save and run this code, we will receive no output because the condition was not met and we did not tell the program to execute another statement.
+
+
+Else Statement
+
+grade = 60
+ 
+if grade >= 65:
+    print("Passing grade")
+ 
+else:
+    print("Failing grade")
+
+Since the grade variable above has the value of 60, the if statement evaluates as false, so the program will not print out Passing grade. The else statement that follows tells the program to do something anyway.
+
+When we save and run the program, we’ll receive the following output:
+
+Output
+Failing grade
+
+
+Else if statement
+=================
+
+balance = 522
+ 
+if balance < 0:
+    print("Balance is below 0, add funds now or you will be charged a penalty.")
+ 
+else:
+    print("Your balance is 0 or above.")
+
+. . .
+if balance < 0:
+    print("Balance is below 0, add funds now or you will be charged a penalty.")
+ 
+elif balance == 0:
+    print("Balance is equal to 0, add funds soon.")
+ 
+else:
+    print("Your balance is 0 or above.")
+
+n the grade.py program, let’s rewrite the code so that there are a few letter grades corresponding to ranges of numerical grades:
+
+    90 or above is equivalent to an A grade
+    80-89 is equivalent to a B grade
+    70-79 is equivalent to a C grade
+    65-69 is equivalent to a D grade
+    64 or below is equivalent to an F grade
+
+. . .
+if grade >= 90:
+    print("A grade")
+ 
+elif grade >=80:
+    print("B grade")
+ 
+elif grade >=70:
+    print("C grade")
+ 
+elif grade >= 65:
+    print("D grade")
+ 
+else:
+    print("Failing grade")
+
+Nested If Statements
+====================
+
+if statement1:				#outer if statement
+    print("true")
+ 
+    if nested_statement:	#nested if statement
+        print("yes")
+ 
+    else:					#nested else statement
+        print("no")
+ 
+else:						#outer else statement
+    print("false")
+
+Output:
+
+true
+yes
+
+
+if statement1:					#outer if 
+    print("hello world")
+ 
+    if nested_statement1:		#first nested if 
+        print("yes")
+ 
+    elif nested_statement2:		#first nested elif
+        print("maybe")
+ 
+    else:						#first nested else
+        print("no")
+ 
+elif statement2:				#outer elif
+    print("hello galaxy")
+ 
+    if nested_statement3:		#second nested if
+        print("yes")
+ 
+    elif nested_statement4:		#second nested elif
+        print("maybe")
+ 
+    else:						#second nested else
+        print("no")
+ 
+else:							#outer else
+    statement("hello universe")
+
+Let’s look at an example of nested if statements with our grade.py program. We can check for whether a grade is passing first (greater than or equal to 65%), then evaluate which letter grade the numerical grade should be equivalent to. If the grade is not passing, though, we do not need to run through the letter grades, and instead can have the program report that the grade is failing. Our modified code with the nested if statement will look like the following:
+
+. . .
+if grade >= 65:
+    print("Passing grade of:")
+ 
+    if grade >= 90:
+        print("A")
+ 
+    elif grade >=80:
+        print("B")
+ 
+    elif grade >=70:
+        print("C")
+ 
+    elif grade >= 65:
+        print("D")
+ 
+else:
+    print("Failing grade")
+
+If we run the code with the variable grade set to the integer value 92, the first condition is met, and the program will print out Passing grade of:. Next, it will check to see if the grade is greater than or equal to 90, and since this condition is also met, it will print out A.
+
+If we run the code with the grade variable set to 60, then the first condition is not met, so the program will skip the nested if statements and move down to the else statement, with the program printing out Failing grade.
+
+We can of course add even more options to this, and use a second layer of nested if statements. Perhaps we will want to evaluate for grades of A+, A and A- separately. We can do so by first checking if the grade is passing, then checking to see if the grade is 90 or above, then checking to see if the grade is over 96 for an A+ for instance:
+
+. . .
+if grade >= 65:
+    print("Passing grade of:")
+ 
+    if grade >= 90:
+        if grade > 96:
+            print("A+")
+ 
+        elif grade > 93 and grade <= 96:
+            print("A")
+ 
+        elif grade >= 90:
+            print("A-")
+. . .
+
+In the code above, for a grade variable set to 96, the program will run the following:
+
+    Check if the grade is greater than or equal to 65 (true)
+    Print out Passing grade of:
+    Check if the grade is greater than or equal to 90 (true)
+    Check if the grade is greater than 96 (false)
+    Check if the grade is greater than 93 and also less than or equal to 96 (true)
+    Print A
+    Leave these nested conditional statements and continue with remaining code
+
+The output of the program for a grade of 96 therefore looks like the following:
+
+Output :
+Passing grade of:
+A
+

@@ -1,0 +1,36 @@
+Python zip() Method
+
+The zip() method takes one or more iterables (such as list, tuple, string, etc.) and constructs the iterator of tuples where each tuple contains elements from each iterable.
+Syntax:
+
+
+zip(*iterables)
+
+
+
+
+numbers = [1,2,3]
+str_numbers = ['One','Two','Three']
+result = zip(numbers, str_numbers)
+print(result)
+print(list(result))
+
+output:
+
+<zip object at 0x0000014EC4A6B788>
+[(1, 'One'), (2, 'Two'), (3, 'Three')]
+
+
+
+
+numbers = [1,2,3]
+str_numbers = ['One','Two','Three']
+roman_numbers = ['I','II','III']
+result = zip(numbers, str_numbers, roman_numbers)
+print(result)
+print(list(result))
+
+
+output:
+<zip object at 0x0000014EC4A90508>
+[(1, 'One', 'I'), (2, 'Two', 'II'), (3, 'Three', 'III')]

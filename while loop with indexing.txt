@@ -1,0 +1,23 @@
+while loop with indexing
+
+This while loop is the more “common” while loop that programmers often use. This type of loop involves an index variable to represent the current position within the sequence. Most of the time, this will start with 0 for the initial iteration. Let’s take a look at an example:
+
+greeting = 'Hello'
+index = 0
+while index < len(greeting):
+	print(greeting[index])
+	index += 1
+
+The initial index value is 0, and the while loop continues to execute as long as the index variable is less than the length of the len(greeting). At each iteration, Python prints the value at the current index position (greeting[index]). Then, Python increments the index by 1 (index += 1) to move to the next position. The output of this example is:
+
+H
+
+e
+
+l 
+
+l 
+
+o 
+
+Pro Tip: In any while loop, you can add conditional statements and stop the iteration process early so that the loop does not examine every character.

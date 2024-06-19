@@ -1,0 +1,31 @@
+Pro tip: Every for loop can also be written as a while loop. 
+
+Let’s see what that looks like. In the example below, we’re using a for loop to print out the characters in the string “Hello.”
+
+>>> greeting = "Hello"
+
+>>> for c in greeting:
+
+>>>   print("The next character is: ", c)
+
+The next character is: H 
+
+The next character is: e 
+
+The next character is: l 
+
+The next character is: l 
+
+The next character is: o
+
+Notice that the for loop will stop iterating after the “o” is printed. You can also use for loops with Python’s range () function to generate a series of numbers, which you can see in the following example:
+
+>>> for i in range(0, 3):
+
+>>>   print("The next value is:” i)
+
+The next value is 0 
+
+The next value is 1 
+
+The next value is 2

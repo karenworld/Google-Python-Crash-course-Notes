@@ -1,0 +1,13 @@
+List comprehensions
+
+List comprehensions are a concise way to create lists in Python. Let’s look at an example:
+
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = [x ** 2 for x in numbers]
+print(squared_numbers)
+
+This example starts with a list of numbers. The second line of code defines the type of transformation you want to execute on each element in the original list. In this case, you’re using this line of code to create a new list called squared_numbers and apply x ** 2 to square each element in the numbers list. The result of each squared element is then printed in a new list:
+
+[1, 4, 9, 16, 25]
+

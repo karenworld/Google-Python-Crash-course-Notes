@@ -1,0 +1,27 @@
+https://www.tutorialsteacher.com/python/python-map-function
+
+
+map(function, iterables) --> map object
+
+
+def square(x):
+    return x*x
+
+
+
+
+>>> numbers=[1, 2, 3, 4, 5] 
+>>> sqrs_of_numbers=map(square, numbers)
+>>> next(sqrs_of_numbers)                
+1                                         
+>>> next(sqrs_of_numbers)                
+4                                         
+>>> next(sqrs_of_numbers)                
+9                                         
+>>> next(sqrs_of_numbers)                
+16                                        
+>>> next(sqrs_of_numbers)                
+25
+
+
+In the above example, the map() function applies to each element in the numbers list. This will return an object of the map class, which is an iterator, and so, we can use the next() function to traverse the list. 

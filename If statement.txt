@@ -1,0 +1,29 @@
+# Create a variable with a value of 82
+testScore = 82
+
+# Test if the variable is greater than 60
+if testScore > 60:
+    print('You passed; well done!')
+
+
+
+# Create a string variable with an error message
+errorMsg = "Insufficient disk space; copy operation failed"
+
+# Use the 'in' membership test to see if a substring appears in the string
+if 'disk' in errorMsg:
+    print('Ouch! Got an error during an I/O operation.')
+
+
+import os
+
+# Loop through all files in C:\Temp\
+for filename in os.listdir("C:\\Temp\\"):
+    # Output all .txt files
+    if filename.endswith('.txt'):
+        print(filename)
+
+
+https://automatetheboringstuff.com/
+
+

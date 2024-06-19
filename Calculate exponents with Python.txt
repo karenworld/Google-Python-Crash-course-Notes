@@ -1,0 +1,100 @@
+Calculate exponents with Python
+
+In mathematics, an exponent of a number says how many times that number is repeatedly multiplied with itself (Wikipedia, 2019). We usually express that operation as bn, where b is the base and n is the exponent or power. We often call that type of operation “b raised to the n-th power”, “b raised to the power of n”, or most briefly as “b to the n” (Wikipedia, 2019).
+
+Python has three ways to exponentiate values:
+
+    The ** operator. To program 25 we do 2 ** 5.
+    The built-in pow() function. 23 coded becomes pow(2, 3).
+    The math.pow() function. To calculate 35, we do math.pow(3, 5)
+
+# Some random values
+valueA = 3
+valueB = 144
+valueC = -987
+valueD = 25
+valueE = -0.25
+
+# Raise the variables to different powers
+aExp = pow(valueA, 2)
+bExp = pow(valueB, 3)
+cExp = pow(valueC, 4)
+dExp = pow(valueD, -5)
+eExp = pow(valueE, 0.125)
+
+# Output results
+print(valueA, "^2 = ", aExp, sep="")
+print(valueB, "^3 = ", bExp, sep="")
+print(valueC, "^4 = ", cExp, sep="")
+print(valueD, "^-5 = ", dExp, sep="")
+print(valueE, "^0.125 = ", eExp, sep="")
+
+3^2 = 9
+144^3 = 2985984
+-987^4 = 949005240561
+25^-5 = 1.024e-07
+-0.25^0.125 = (0.7768869870150186+0.3217971264527913j)
+
+The last bit of code outputs the original and exponentiated value with Python’s print() function. As we can see from the output, most results are as expected (although -0.250.125 returned a complex number):
+
+
+pow() can also accept three arguments. In that case the third argument specifies the modulo of the exponentiation (Python Docs, n.d. a). That returns the remainder of exponentiation. Using pow() in that way is more efficient than the equivalent pow(base, exp) % mod.
+
+Here’s how math.pow() handles uncommon cases. math.pow(1.0, x) and math.pow(x, 0.0) always return 1.0. That happens even when x is zero or NaN (Python.org, n.d. b).
+
+Also, math.pow() raises a ValueError exception when: both arguments are finite, the first argument is negative, or the second argument is not an integer (Python Docs, n.d. b).
+
+Exponentiate Python list or array
+=================================
+
+# Some random values
+values = [
+    12, 89, -12.5, 0.443,
+    1310, 3110, 125, 54
+]
+
+# Raise each number to the power 3
+exponents = [pow(value, 3) for value in values]
+
+# Output both lists
+print("Original list:\n", values)
+print("Raised to the power 3:\n", exponents)
+
+output:
+
+Original list:
+ [12, 89, -12.5, 0.443, 1310, 3110, 125, 54]
+Raised to the power 3:
+ [1728, 704969, -1953.125, 0.086938307, 2248091000, 30080231000, 1953125, 157464]
+
+Here’s how we raise values to a particular value with a regular for loop:
+
+# Some random values
+values = [
+    12, 89, -12.5, 0.443,
+    1310, 3110, 125, 54
+]
+
+# Exponents
+powers = [
+    2, 3, 4, 5,
+    1.5, -3, 2, 0.5
+]
+
+results = []
+
+# Loop through the values, and raise
+# each to the specified power
+for i, value in enumerate(values):
+    results.append(pow(value, powers[i]))
+
+# Output data
+print("Original values:\n", values)
+print("Exponents:\n", powers)
+print("Outcome:\n", results)
+
+
+# Loop through the original 'values' list, and
+# raise each number to a power (replacing the original)
+for index, value in enumerate(values):
+    values[index] = pow(value, 5)

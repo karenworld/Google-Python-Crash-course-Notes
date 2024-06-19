@@ -1,0 +1,37 @@
+Note: Python does not use characters as a type like other programming languages do; it just supports strings with a length of 1.
+for Loop
+
+The most direct—and common—way to loop over a string is to use the for loop. Let’s look at an example:
+
+greeting = 'Hello'
+for char in greeting:
+	print(char)
+
+output:
+H
+e 
+
+l 
+
+l 
+
+o 
+
+
+
+for i in range(len(greeting)):
+	print(i)
+
+len(greeting) is an integer that tells Python how many characters are in the string. But because it’s an integer, you need to convert it to an iterable sequence by using the range() function. This loop does the same thing as the loop above, but instead of printing elements, it prints integers resulting in the output below:
+
+0
+
+1
+
+2
+
+3
+
+4
+
+

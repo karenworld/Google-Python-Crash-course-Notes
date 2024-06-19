@@ -1,0 +1,81 @@
+if statement
+============
+
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+
+ifElse statement
+================
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    else:
+        print("Valid username")
+#This code will not have an output. 
+
+Els statement
+=============
+def is_even(number):
+    if number % 2 == 0:
+        return True
+    return False
+#This code has no ouput
+
+The code below using nested else if make it hard to read therefore Python come up with elif
+-------------------------------------------------------------------------------------------
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    else:
+        if len(username) > 15:
+            print("Invalid username. Must be at most 15 characters long")
+        else:
+            print("Valid username")
+
+This is where the elif statement, which is short for else if, comes into play.
+But before we jump into how to use it, let's take a look at why we need it in
+the first place. Let's go back to our trusty username validation example.
+Now, what if your company also had a rule that usernames longer than 15
+characters aren't allowed?
+How could we let the user know if their chosen username was too long?
+We could do it like this. In this case, we're adding an extra if block inside
+the else block. This works, but the way the code is nested makes it kind of hard
+to read. To avoid unnecessary nesting and make the code clearer, Python gives
+us the elif keyword, which lets us handle more than two comparison cases.
+Take a look. The elif statement looks very similar to the if statement.
+It's followed by a condition and a colon, and a block of code indented to
+the right that forms the body.
+The condition must be true for the body of the elif block to be executed.
+The main difference between elif and if statements is we can only write an elif
+block as a companion to an if block.
+That's because the condition of the elif statement will only be checked if
+the condition of the if statement wasn't true.
+So in this example, the program first checks whether the username is less than
+three characters long, and prints a message if that's the case.
+If the username has at least three characters, the program then checks if
+it's longer than 15 characters.
+If it is, we get a message to tell us that.
+Finally, if none of the above conditions were met, the program prints
+a message indicating that the username is valid. 
+
+
+elif statements
+===============
+def hint_username(username):
+    if len(username) < 3:
+        print("Invalid username. Must be at least 3 characters long")
+    elif len(username) > 15:
+        print("Invalid username. Must be at most 15 characters long")
+    else:
+        print("Valid username")
+
+
+Syntax of an if-elif-else block
+================================
+if condition1:
+    action1
+elif condition2:
+    action2
+else:
+    action3
