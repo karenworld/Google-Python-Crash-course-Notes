@@ -1,0 +1,68 @@
+new_list = []
+for thing in list_of_things:
+    new_list.append(do_something(thing))
+
+There is also a more streamlined way to do this by using a list comprehension. 
+A list comprehension allows you to create a new list from an iterable in a single line. 
+This line achieves the same result as the previous for loop, but in a more concise way:
+
+new_list = [do_something(thing) for thing in list_of_things]
+
+List comprehensions can be used with tuples in Python, too. 
+
+Here is an example of a list of tuples. 
+
+In this example each tuple will contain the numbers 1, 2, and 3. 
+
+This code will create 5 sets of (1,2,3).
+
+# Create a list of tuples where each tuple contains the numbers 1, 2, and 3.
+
+numbers = [(1, 2, 3) for _ in range(5)]
+
+
+For loop vs. list comprehension
+
+The two code blocks below compare performing the same process using a list comprehension and a for loop. 
+
+The line [ x*2 for x in range(1,11) ] is a simple list comprehension. 
+
+This single line of code iterates over a range from 1 to 10, multiplies each element in the range by 2, 
+
+and ultimately creates a new list from all multiples of 2 from 2 to 20. 
+
+The second block of code below is a for loop designed to carry out the same function as the list comprehension. 
+The for loop, however, requires three lines of code. 
+
+
+my_list = []
+for x in range(1,11):
+    my_list.append(x*2)
+print(my_list)
+
+List comprehension with conditional statement
+
+print("List comprehension result:")
+print([ x for x in range(1,101) if x % 10 == 0 ]) #the one-line code
+
+
+# The list comprehension above accomplishes the same result as# the long form version of the code:
+print("Long form code result:")
+my_list = []
+for x in range(1,101):
+    if x % 10 == 0:
+        my_list.append(x)
+print(my_list)
+
+
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+
+
+
+
+
+
+
+
+

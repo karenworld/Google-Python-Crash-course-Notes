@@ -1,0 +1,73 @@
+x = ["Now", "we", "are", "cooking!"]
+
+output:
+['Now', 'we', 'are', 'cooking!']
+
+
+x = ["Now", "we", "are", "cooking!"]
+type(x)
+
+output:
+<class 'list'>
+
+
+x = ["Now", "we", "are", "cooking!"]
+type(x)
+print(x)
+
+
+output:
+
+['Now', 'we', 'are', 'cooking!']
+
+
+x = ["Now", "we", "are", "cooking!"]
+type(x)
+print(x)
+len(x)
+
+output:
+
+4
+
+
+x = ["Now", "we", "are", "cooking!"]
+"are" in x
+"Today" in x
+
+output:
+False
+
+x = ["Now", "we", "are", "cooking!"]
+print(x[0])
+print(x[3])
+
+output:
+Now 
+cooking!
+
+x = ["Now", "we", "are", "cooking!"]
+print(x[4])
+
+#This last line will through an error
+
+
+x = ["Now", "we", "are", "cooking!"]
+x[1:3]
+
+output:
+
+['we', 'are']
+
+
+x = ["Now", "we", "are", "cooking!"]
+x[:2]
+x[2:]
+
+output:
+
+['are', 'cooking!']
+
+In Python, lists and strings are quite similar. They’re both examples of sequences of data. Sequences have similar properties, like (1) being able to iterate over them using for loops; (2) support indexing; (3) using the len function to find the length of the sequence; (4) using the plus operator + in order to concatenate; and (5) using the in keyword to check if the sequence contains a value. Understanding these concepts allows you to apply them to other sequence types as well.
+
+

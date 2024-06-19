@@ -1,0 +1,69 @@
+Skill Group 5
+
+    Use the string.join() method to concatenate a string that provides a list name and its elements.
+
+
+# This function accepts a list name and a list of elements, and returns
+# a string with the format: "The "list_name" list includes: element1, 
+# element2, element3". 
+def list_elements(list_name, elements):
+    # This task can be completed in a single line of code. The 
+    # concatenation of strings, "list_name", and the list "elements" can
+    # occur on the return line. In this case, the string "The " is added 
+    # to the "list_name", plus the string " list includes: ", then the
+    # "elements" are joined using a comma to separate each element of the 
+    # list.
+    return "The " + list_name + " list includes: " + ", ".join(elements)
+
+print(list_elements("Printers", ["Color Printer", "Black and White Printer", "3-D Printer"]))
+# Should print "The Printers list includes: Color Printer, Black and White Printer, 3-D Printer"
+
+
+Skill Group 6
+
+    Use map() and convert the map object to a list so we can print all the results at once.
+
+
+# A simple function to add 1 to a given number
+def add_one(number):
+    return number + 1
+
+# A list of numbers
+numbers = [1, 2, 3, 4, 5]
+
+# Use map to apply the function to each element in the list
+result = map(add_one, numbers)
+
+# Convert the map object to a list to print the result
+print(list(result))
+
+# Outputs: [2, 3, 4, 5, 6]
+
+
+
+Skill Group 7
+
+    Use zip() to combine a list of names and ages into a list of tuples, and print all the tuples at once.
+
+
+ #Two lists
+names = ["Alice", "Bob", "Charlie"]
+ages = [25, 30, 35]
+team = ['A', 'B', 'C']
+
+# Use zip to combine the lists
+combined = zip(names, ages, team)
+
+# Convert the zip object to a list to print the result
+print(list(combined))
+
+# Outputs: [('Alice', 25), ('Bob', 30), ('Charlie', 35)]
+
+
+resouce reference:
+
+https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range
+
+https://docs.python.org/3/library/stdtypes.html#lists
+
+https://docs.python.org/3/library/stdtypes.html#tuples

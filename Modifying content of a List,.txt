@@ -1,0 +1,71 @@
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.append("Kiwi")
+print(fruits)
+
+output:
+
+['Pineapple', 'Banana', 'Apple', 'Melon', 'Kiwi']
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+print(fruits)
+
+output:
+
+['Orange', 'Pineapple', 'Banana', 'Apple', 'Melon']
+
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+print(fruits)
+
+output:
+
+['Orange', 'Pineapple', 'Banana', 'Apple', 'Melon', 'Peach']
+
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+print(fruits)
+
+output:
+
+['Orange', 'Pineapple', 'Banana', 'Apple', 'Peach']
+
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.remove("Pear")
+#This will throw an error
+
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+fruits.pop(3) #remove
+print(fruits)
+
+output:
+
+['Orange', 'Pineapple', 'Banana', 'Peach']
+
+fruits = ["Pineapple", "Banana", "Apple", "Melon"]
+fruits.insert(0, "Orange")
+fruits.insert(25, "Peach")
+fruits.remove("Melon")
+fruits.pop(3)
+fruits[2] = "Strawberry"
+print(fruits)
+
+output:
+
+['Orange', 'Pineapple', 'Strawberry', 'Peach']
+
+
+
+
+
+
