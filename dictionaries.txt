@@ -1,0 +1,54 @@
+x = {}
+type(x)
+
+output: <class 'dict'>
+
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+print(file_counts)
+
+output: {'jpg': 10, 'txt': 14, 'csv': 2, 'py': 23}
+
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+file_counts["txt"]
+
+output: 14
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+"jpg" in file_counts
+"html" in file_counts
+
+output: false
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+file_counts["cfg"] = 8
+print(file_counts)
+
+output : {'jpg': 10, 'txt': 14, 'csv': 2, 'py': 23, 'cfg': 8}
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23}
+file_counts["csv"] = 17
+print(file_counts)
+
+output : {'jpg': 10, 'txt': 14, 'csv': 17, 'py': 23}
+
+
+file_counts = {"jpg":10, "txt":14, "csv":2, "py":23, 'cfg':8}
+del file_counts["cfg"] #note : del
+print(file_counts)
+
+output : {'jpg': 10, 'txt': 14, 'csv': 2, 'py': 23}
+
+
+
+
+
+
+
+
+
+
+
+
+
